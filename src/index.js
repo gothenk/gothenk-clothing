@@ -9,7 +9,7 @@ import App from "./App";
 import { store, persistor } from "./store/store";
 import { stripePromise } from "./utils/stripe/stripe.utils";
 
-import "./index.scss";
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 
 import reportWebVitals from "./reportWebVitals";
 
@@ -32,3 +32,5 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+serviceWorkerRegistration.register();
